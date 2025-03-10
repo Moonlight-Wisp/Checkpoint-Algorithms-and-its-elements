@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Début  <br>
+    Déclarer : <br> <br>
+        phrase : chaîne de caractères <br>
+        longueur : entier <br>
+        nombreMots : entier <br>
+        nombreVoyelles : entier <br>
+        i : entier <br>
+        voyelles : "aeiouAEIOU" <br>
+    
+    Initialiser : <br>
+        longueur := 0 <br>
+        nombreMots := 0 <br>
+        nombreVoyelles := 0 <br>
+        i := 0 <br>
+        phrase := Lire phrase <br>
+    
+    // Compter la longueur de la phrase <br>
+    POUR chaque caractère dans phrase FAIRE <br>
+        longueur := longueur + 1 <br>
+    FIN POUR <br>
+    
+    // Compter le nombre de mots et de voyelles <br>
+    POUR chaque caractère dans phrase FAIRE <br>
+        SI caractère est une voyelle (i.e., dans "aeiouAEIOU") ALORS <br>
+            nombreVoyelles := nombreVoyelles + 1 <br>
+        FIN SI <br>
+        
+        SI caractère EST un espace ET le caractère précédent n'était pas un espace ALORS <br>
+            nombreMots := nombreMots + 1 <br>
+        FIN SI <br>
+    FIN POUR <br>
+
+    // Ajouter un mot si la phrase n'est pas vide et ne contient pas uniquement des espaces <br>
+    SI longueur > 0 ET dernier caractère != " " ALORS <br>
+        nombreMots := nombreMots + 1 <br>
+    FIN SI <br>
+    
+    // Afficher les résultats <br>
+    Afficher "Longueur de la phrase : " + longueur <br>
+    Afficher "Nombre de mots : " + nombreMots <br>
+    Afficher "Nombre de voyelles : " + nombreVoyelles <br>
+FIN <br>
+
+</body>
+</html>
